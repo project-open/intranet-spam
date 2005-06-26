@@ -1,4 +1,4 @@
-<master src=../../intranet-spam/www/master>
+<master src=../../intranet-core/www/master>
 <property name="context">@context;noquote@</property>
 <property name="title">#intranet-spam.Spam_Queued#</property>
 <property name="main_navbar_label">admin</property>
