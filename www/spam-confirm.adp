@@ -1,6 +1,6 @@
 <!-- spam confirmation page -->
 
-<master src=../../intranet-core/www/master>
+<master src=../../intranet-spam/www/master>
 <property name="title">Confirm Spam</property>
 <property name="context">@context;noquote@</property>
 
