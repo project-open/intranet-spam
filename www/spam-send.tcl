@@ -5,6 +5,7 @@ ad_page_contract {
     subject:notnull
     {body_plain:trim ""}
     {body_html:allhtml,trim ""}
+    {attachment "//attachment/attach/"}
     send_date_ansi:notnull
     send_time_12hr:notnull
     spam_id:naturalnum
