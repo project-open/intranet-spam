@@ -26,6 +26,7 @@
         <provides url="intranet-spam" version="3.2.7.0.0"/>
         <requires url="intranet-core" version="3.2"/>
         <requires url="acs-mail" version="5.1"/>
+        <requires url="intranet-sql-selectors" version="3.0.0.0.0"/>
 
     </version>
 </package>
