@@ -191,6 +191,7 @@ db_foreach spam_full_sql "" {
     # --------------------------------------------------------
 
     set storage_type lob
+   
     db_transaction {
 
 	if {1} {
