@@ -44,7 +44,7 @@ for {set i 1} {$i <= ${spam_queue:rowcount}} {incr i} {
     "]
 }
 
-# !!! eventually order by when it was sent
+# ToDo: Eventually order by when it was sent
 # we want to match sent messages: 
 # (no rows in amo OR there is a row in amo but send_attempts > 0) 
 # and approved_p = 't'
