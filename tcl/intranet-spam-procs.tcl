@@ -25,15 +25,13 @@ ad_proc spam_package_id {} {
 ad_proc -public spam_base {} { 
     returns the base URL of the spam system.
 } {
-    return [util_memoize {
-	db_string spam_base_query "
-	select
-	 site_node.url(node_id) 
- 	from 
-	 site_nodes, apm_packages 
-	where
-	 object_id=package_id and package_key='[spam_package_key]'
-	"}]
+    return [util_memoize [list db_string spam_base_query "
+	select	site_node.url(node_id) 
+ 	from	site_nodes, apm_packages 
+	where	object_id = package_id and 
+		package_key='[spam_package_key]'
+	"
+    ]]
 }
 
 
