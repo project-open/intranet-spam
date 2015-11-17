@@ -90,7 +90,7 @@ if {$object_id != "" && [ad_permission_p $object_id "admin"]} {
 # ------------------------------------------------------
 #if {![empty_string_p $upload_file]} {
 #	set tmp_size [file size ${upload_file.tmpfile}]
-#	set max_file_size [ad_parameter MaxFileSize {general-comments} {0}]
+#	set max_file_size [im_parameter MaxFileSize {general-comments} {0}]
 #	if { $tmp_size > $max_file_size && $max_file_size > 0 } {
 #		ad_complain "[_ general-comments.lt_Your_file_is_too_larg]  [_ general-comments.The_publisher_of] [ad_system_name] [_ general-comments.lt_has_chosen_to_limit_a] [util_commify_number $max_file_size] [_ general-comments.bytes].\n"
 #	}
@@ -98,7 +98,7 @@ if {$object_id != "" && [ad_permission_p $object_id "admin"]} {
 #		ad_complain "[_ general-comments.lt_Your_file_is_zero-len]\n"
 #	}
 #
-#	set allow_files_p [ad_parameter AllowFileAttachmentsP {general-comments} {t}]
+#	set allow_files_p [im_parameter AllowFileAttachmentsP {general-comments} {t}]
 #	if { $allow_files_p != "t" } {
 #		ad_complain "[_ general-comments.lt_Attaching_files_to_co]"
 #	}

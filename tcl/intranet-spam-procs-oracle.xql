@@ -27,7 +27,7 @@
          sql_query => :sql,
          html_text => :html,
          plain_text => :plain,
-         creation_user => [ad_get_user_id],
+         creation_user => [ad_conn user_id],
          creation_ip => '[ad_conn peeraddr]',
          context_id => :context_id,
          approved_p => :approved_p

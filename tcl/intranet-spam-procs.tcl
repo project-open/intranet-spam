@@ -128,7 +128,7 @@ ad_proc -private spam_put_in_outgoing_queue {spam_id} {
     (that is, program logic should check for approval before calling
     this routine in the first place).
 } {
-#    set spam_sender [ad_parameter -package_id [spam_package_id] SpamSender]
+#    set spam_sender [im_parameter -package_id [spam_package_id] SpamSender]
 
     set user_id [ad_conn user_id]
     set spam_sender [db_string spam_sender "select first_names||' '||last_name||' <'||email||'>' from cc_users where user_id=:user_id"]
