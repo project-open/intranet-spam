@@ -61,7 +61,7 @@ ad_proc spam_new_message {
     # something general in ACS for this kind of stuff?).
     regsub { (\d):} $send_date { 0\1:} send_date
 
-    set user_id [ad_get_user_id]
+    set user_id [ad_conn user_id]
     set peeraddr [ad_conn peeraddr]
 
     set plain "asdf"
@@ -130,7 +130,7 @@ ad_proc -private spam_put_in_outgoing_queue {spam_id} {
 } {
 #    set spam_sender [ad_parameter -package_id [spam_package_id] SpamSender]
 
-    set user_id [ad_get_user_id]
+    set user_id [ad_conn user_id]
     set spam_sender [db_string spam_sender "select first_names||' '||last_name||' <'||email||'>' from cc_users where user_id=:user_id"]
 
     db_1row spam_get_outgoing_message {

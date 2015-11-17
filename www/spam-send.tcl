@@ -44,7 +44,7 @@ ad_page_contract {
 # ------------------------------------------------------
 
 set context [list "confirm"]
-set user_id [ad_get_user_id]
+set user_id [ad_conn user_id]
 # set content_mime_type "text/html"
 set content_mime_type "text/plain"
 
@@ -162,7 +162,7 @@ db_foreach spam_full_sql "" {
     # in the substitution process
     set auto_login [im_generate_auto_login -user_id $person_id]
     
-    set party_from [ad_get_user_id]
+    set party_from [ad_conn user_id]
     set party_to $person_id
 
     # Substitute <...> elements
