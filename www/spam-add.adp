@@ -10,7 +10,7 @@ The following variables are available withing you message:<br>
 
 
 <form action="spam-confirm" method="post">
-<%= [export_form_vars object_id sql_query num_recipients] %>
+<%= [export_vars -form {object_id sql_query num_recipients}] %>
 @export_vars;noquote@
 
 <table>

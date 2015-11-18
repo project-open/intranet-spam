@@ -68,9 +68,7 @@ append object_rel_url $object_id
 # --------------------------------------------------
 
 set spam_show_users_url "spam-show-users?[export_url_vars object_id selector_id]"
-
-set export_vars [export_form_vars spam_id]
-
+set export_vars [export_vars -form {spam_id}]
 set date_widget [ad_dateentrywidget send_date]
 set time_widget [spam_timeentrywidget send_time]
 

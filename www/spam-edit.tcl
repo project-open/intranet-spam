@@ -76,7 +76,7 @@ if [acs_mail_multipart_p $content_item_id] {
 set date_widget [ad_dateentrywidget send_date $send_date]
 set time_widget [spam_timeentrywidget send_time $send_time]
 set confirm_target "spam-update"
-set export_vars [export_form_vars spam_id num_recipients confirm_target]
+set export_vars [export_vars -form {spam_id num_recipients confirm_target}]
 set context [list "Edit Spam"]
 
 ad_return_template

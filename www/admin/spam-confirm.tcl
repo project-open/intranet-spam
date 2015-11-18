@@ -39,8 +39,7 @@ if {$body_plain != ""}  {
     set escaped_body_plain [ad_convert_to_html $body_plain]
 }
 
-set export_vars [export_form_vars send_date_ansi send_time_12hr \
-	subject body_plain body_html spam_id]
+set export_vars [export_vars -form {send_date_ansi send_time_12hr subject body_plain body_html spam_id}]
 
 
 
