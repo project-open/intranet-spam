@@ -57,7 +57,7 @@ set object_type [db_string object_type "select object_type from acs_objects wher
 set object_rel_url [db_string object_url "select url from im_biz_object_urls where url_type = 'view' and object_type = :object_type"]
 append object_rel_url $object_id
 
-set spam_show_users_url "/intranet-sql-selectors/view-results?[export_url_vars selector_id]"
+set spam_show_users_url "/intranet-sql-selectors/view-results?[export_vars -url {selector_id}]"
 
 set spam_sender [db_string spam_sender "select first_names||' '||last_name||' <'||email||'>' from cc_users where user_id=:user_id"]
 
