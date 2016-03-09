@@ -23,7 +23,7 @@ db_1row spam_get_message {
     where spam_id = :spam_id
 }
 
-# XXX: see if spam already sent; don't let user edit spam once it's sent,
+# TODO: see if spam already sent; don't let user edit spam once it's sent,
 # should view instead!
 
 if {$sent_p == "t"} { 
@@ -37,7 +37,7 @@ set num_recipients [db_string spam_get_num_recipients "
      select count(1) from ($sql_query)
 "]
 
-# XXX: cut-and-paste programming, should be a proc
+# TODO: cut-and-paste programming, should be a proc
 
 set html_text ""
 
